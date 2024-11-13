@@ -1,5 +1,5 @@
-import { __wbg_set_wasm, WalletWrapper, greet } from '../dario-bdk-wasm/pkg/bdk_wasm_bg.js';
-import * as wasm from '../dario-bdk-wasm/pkg/bdk_wasm_bg.wasm';
+import { __wbg_set_wasm, WalletWrapper, greet } from '../bdk-wasm/pkg/bdk_wasm_bg.js';
+import * as wasm from '../bdk-wasm/pkg/bdk_wasm_bg.wasm';
 
 async function run() {
     // Initialize WASM
@@ -16,7 +16,7 @@ async function run() {
     );
     
     // Test sync
-    await wallet.sync(1);
+    await wallet.sync(2);
     
     // Test balance
     console.log("Balance:", wallet.balance());
